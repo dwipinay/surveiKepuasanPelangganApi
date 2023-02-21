@@ -1,5 +1,5 @@
 import express from 'express'
-import {  logina } from '../controllers/UsersController.js'
+import {  login } from '../controllers/UsersController.js'
 import { verifyToken } from '../middleware/VerifyToken.js'
 import { refreshToken } from '../controllers/RefreshToken.js'
 
@@ -12,17 +12,17 @@ const router = express.Router()
 
 // Token
 // router.post('/apisirs/login', login)
-router.post('/apisirs/logina', logina)
+router.post('/apisurveikepuasanpelanggan/login', login)
 // router.delete('/apisirs/logout', logout)
-router.get('/apisirs/token', refreshToken)
+router.get('/apisurveikepuasanpelanggan/token', refreshToken)
 
 //Survei Kepuasan
-router.post('/apisirs/surveikepuasan',verifyToken, insertDataSurveiKepuasan)
-router.get('/apisirs/surveikepuasan', verifyToken, getDataSurveiKepuasan)
-router.get('/apisirs/surveikepuasandetail', getDataSurveiKepuasanDetail)
-router.get('/apisirs/surveikepuasandetail/:id', getSurveiKepuasanById)
-router.patch('/apisirs/surveikepuasandetail/:id', updateDataSurveiKepuasan);
-router.delete('/apisirs/surveikepuasandetail/:id', deleteDataSurveiKepuasan);
+router.post('/apisurveikepuasanpelanggan/surveikepuasan',verifyToken, insertDataSurveiKepuasan)
+router.get('/apisurveikepuasanpelanggan/surveikepuasan', verifyToken, getDataSurveiKepuasan)
+router.get('/apisurveikepuasanpelanggan/surveikepuasandetail', getDataSurveiKepuasanDetail)
+router.get('/apisurveikepuasanpelanggan/surveikepuasandetail/:id', getSurveiKepuasanById)
+router.patch('/apisurveikepuasanpelanggan/surveikepuasandetail/:id', updateDataSurveiKepuasan);
+router.delete('/apisurveikepuasanpelanggan/surveikepuasandetail/:id', deleteDataSurveiKepuasan);
 
-router.get('/apisirs/getkegiatan', getKegiatan)
+router.get('/apisurveikepuasanpelanggan/getkegiatan', getKegiatan)
 export default router

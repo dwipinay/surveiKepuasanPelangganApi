@@ -4,7 +4,7 @@ import jsonWebToken from 'jsonwebtoken'
 import Joi from 'joi'
 import { createHash } from "crypto"
 
-export const logina = (req, res) => {
+export const login = (req, res) => {
     const schema = Joi.object({
         userName: Joi.string()
             .required(),
