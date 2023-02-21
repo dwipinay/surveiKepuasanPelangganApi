@@ -1,5 +1,5 @@
 import { databaseSURVEI } from '../config/Database.js'
-import { dataResponden, dataPendapatResponden1, dataPendidikanTerakhir, dataPekerjaanUtama, dataDebitur, dataJawaban,  dataPertanyaan, dataJenisKelamin, dataRekomendasi } from '../models/SurveiKepuasan.js'
+import { dataResponden, dataPendapatResponden1, dataPendidikanTerakhir, dataPekerjaanUtama, dataDebitur, dataJawaban,  dataPertanyaan, dataJenisKelamin, dataRekomendasi, getDataSurveiKepuasanJoin } from '../models/SurveiKepuasan.js'
 import Joi from 'joi'
 import { createHash } from "crypto"
 
@@ -99,8 +99,30 @@ export const getDataSurveiKepuasanDetail = (req, res) => {
     })
 }
 
-
-
+export const getKegiatan = (req, res) => {
+    const data = [
+        req.body.id,
+        req.body.rs_id,
+        req.body.nama
+    ]
+      getDataSurveiKepuasanJoin(data, (err, results) => {
+        if (err) {
+            res.status(422).send({
+                status: false,
+                message: err
+            })
+            return
+        }
+        res.status(201).send({
+            status: true,
+            message: "data Get",
+            data: {
+                id: results[0]
+            }
+        })
+    })
+}
+// WHERE `data_responden`.`rs_id` = 1603085
 export const getSurveiKepuasanById = async(req,res)=>{
     dataPendapatResponden1.findOne({
        

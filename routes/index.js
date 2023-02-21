@@ -3,7 +3,7 @@ import {  logina } from '../controllers/UsersController.js'
 import { verifyToken } from '../middleware/VerifyToken.js'
 import { refreshToken } from '../controllers/RefreshToken.js'
 
-import { insertDataSurveiKepuasan, getDataSurveiKepuasan, getSurveiKepuasanById, getDataSurveiKepuasanDetail, updateDataSurveiKepuasan, deleteDataSurveiKepuasan } from '../controllers/SurveiKepuasanController.js'
+import { insertDataSurveiKepuasan, getDataSurveiKepuasan, getSurveiKepuasanById, getDataSurveiKepuasanDetail, updateDataSurveiKepuasan, deleteDataSurveiKepuasan, getKegiatan } from '../controllers/SurveiKepuasanController.js'
 const router = express.Router()
 
 // User
@@ -23,4 +23,6 @@ router.get('/apisirs/surveikepuasandetail', getDataSurveiKepuasanDetail)
 router.get('/apisirs/surveikepuasandetail/:id', getSurveiKepuasanById)
 router.patch('/apisirs/surveikepuasandetail/:id', updateDataSurveiKepuasan);
 router.delete('/apisirs/surveikepuasandetail/:id', deleteDataSurveiKepuasan);
+
+router.get('/apisirs/getkegiatan', getKegiatan)
 export default router

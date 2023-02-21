@@ -5,11 +5,14 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjcsIm5hbWEiO
 ### Get Token
 GET http://localhost:5001/apisirs/token
 
+### Get Token
+GET http://localhost:5001/apisirs/getkegiatan
+
 
 ### RL 3.7 READ
 GET http://localhost:5001/apisirs/surveikepuasan
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjU2LCJuYW1hIjoiUlMgVW11bSBEYWVyYWggVGFsYW5nIFViaSIsImVtYWlsIjoiMTYwMzA4NSIsInJzSWQiOiIxNjAzMDg1IiwiaWF0IjoxNjc2OTQ0OTA1LCJleHAiOjE2NzY5NDQ5NDB9.Z3ippDvMy0sd05ZFJ13rmH6fljbInR5upOKkiVQznwY
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjU2LCJuYW1hIjoiUlMgVW11bSBEYWVyYWggVGFsYW5nIFViaSIsImVtYWlsIjoiMTYwMzA4NSIsInJzSWQiOiIxNjAzMDg1IiwiaWF0IjoxNjc2OTYzNjI2LCJleHAiOjE2NzY5NjM2NjF9.YAAIJMqlChCpyOjEg7nOaORoIgkERdebasWtb9IadvQ
 
 ### Login
 POST http://localhost:5001/apisirs/logina
