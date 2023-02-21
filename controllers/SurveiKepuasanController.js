@@ -100,12 +100,13 @@ export const getDataSurveiKepuasanDetail = (req, res) => {
 }
 
 export const getKegiatan = (req, res) => {
-    const data = [
-        req.body.id,
-        req.body.rs_id,
-        req.body.nama
-    ]
-      getDataSurveiKepuasanJoin(data, (err, results) => {
+    // const data = [
+    //     req.body.id,
+    //     req.user.rsId,
+    //     req.body.nama
+    // ]
+    // console.log(data)
+      getDataSurveiKepuasanJoin(req.user.rsId, (err, results) => {
         if (err) {
             res.status(422).send({
                 status: false,
@@ -229,13 +230,13 @@ console.log(req);
         }, { transaction })
 
         const dataDetail = req.body.data.map((value, index) => {
-            const password = value.jawabanId
-                const salt = 'saltshshsh'
-                const passhash = createHash("sha256")
-                    .update(password)
-                    .update(createHash("sha256").update(salt, "utf8").digest("hex"))
-                    .digest("hex")
-                    console.log(passhash)
+            // const password = value.jawabanId
+            //     const salt = 'saltshshsh'
+            //     const passhash = createHash("sha256")
+            //         .update(password)
+            //         .update(createHash("sha256").update(salt, "utf8").digest("hex"))
+            //         .digest("hex")
+            //         console.log(passhash)
                 
             return {
                 

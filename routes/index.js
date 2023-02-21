@@ -24,5 +24,5 @@ router.get('/apisurveikepuasanpelanggan/surveikepuasandetail/:id', getSurveiKepu
 router.patch('/apisurveikepuasanpelanggan/surveikepuasandetail/:id', updateDataSurveiKepuasan);
 router.delete('/apisurveikepuasanpelanggan/surveikepuasandetail/:id', deleteDataSurveiKepuasan);
 
-router.get('/apisurveikepuasanpelanggan/getkegiatan', getKegiatan)
+router.get('/apisurveikepuasanpelanggan/getkegiatan',verifyToken, getKegiatan)
 export default router

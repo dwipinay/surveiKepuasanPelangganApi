@@ -1,18 +1,20 @@
 ### Get User Data
-GET http://localhost:5001/apisirs/users
+GET http://localhost:5001/apisurveikepuasanpelanggan/users
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjcsIm5hbWEiOiJpbmF5IiwiZW1haWwiOiJpbmF5QGdtYWlsLmNvbSIsInJzSWQiOiIxIiwiaWF0IjoxNjczMzM2NzY0LCJleHAiOjE2NzMzMzY3OTl9.OlIsHubSol7JZjcOxQR7m4JzF_NJUR96v0DxKTQ5bgw
 
 ### Get Token
-GET http://localhost:5001/apisirs/token
+GET http://localhost:5001/apisurveikepuasanpelanggan/token
 
 ### Get Token
 GET http://202.70.136.86/apisurveikepuasanpelanggan/getkegiatan
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjU2LCJuYW1hIjoiUlMgVW11bSBEYWVyYWggVGFsYW5nIFViaSIsImVtYWlsIjoiMTYwMzA4NSIsInJzSWQiOiIxNjAzMDg1IiwiaWF0IjoxNjc2OTczMjMwLCJleHAiOjE2NzY5NzMyNjV9.ZwpcVYiEu6LTGMq7HxPGYoCAAGb3SeHUc2Eksy04qoc
 
 
 ### RL 3.7 READ
 GET http://202.70.136.86/apisurveikepuasanpelanggan/surveikepuasan
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjU2LCJuYW1hIjoiUlMgVW11bSBEYWVyYWggVGFsYW5nIFViaSIsImVtYWlsIjoiMTYwMzA4NSIsInJzSWQiOiIxNjAzMDg1IiwiaWF0IjoxNjc2OTY3NjA4LCJleHAiOjE2NzY5Njc2NDN9.JfNI1YICFo96yFtakAFBSOEbIjhjI7BCXBAgus2gf_A
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjU2LCJuYW1hIjoiUlMgVW11bSBEYWVyYWggVGFsYW5nIFViaSIsImVtYWlsIjoiMTYwMzA4NSIsInJzSWQiOiIxNjAzMDg1IiwiaWF0IjoxNjc2OTcyMzA5LCJleHAiOjE2NzY5NzIzNDR9.dbD2foUyyVNd3YCMTwZANU24J-eYpuWu506t1jpWP0w
 
 ### Login
 POST http://202.70.136.86/apisurveikepuasanpelanggan/login
@@ -24,9 +26,9 @@ Content-Type: application/json
 }
 
 ###survei
-POST  http://202.70.136.86/apisirs/surveikepuasan
+POST  http://202.70.136.86/apisurveikepuasanpelanggan/surveikepuasan
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjU2LCJuYW1hIjoiUlMgVW11bSBEYWVyYWggVGFsYW5nIFViaSIsImVtYWlsIjoiMTYwMzA4NSIsInJzSWQiOiIxNjAzMDg1IiwiaWF0IjoxNjc2OTQ0NTk2LCJleHAiOjE2NzY5NDQ2MzF9.0sJjqqBLaFVGuConcMGuk_bhRMIBt-1xJetKRlzrl8U
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjU2LCJuYW1hIjoiUlMgVW11bSBEYWVyYWggVGFsYW5nIFViaSIsImVtYWlsIjoiMTYwMzA4NSIsInJzSWQiOiIxNjAzMDg1IiwiaWF0IjoxNjc2OTcyMjY0LCJleHAiOjE2NzY5NzIyOTl9.Q-w_kjPybac47Ni7GJ4_7N6pZseumz2WYICIm-g9Fwk
 
 {
         "noRekamMedis": "12",
