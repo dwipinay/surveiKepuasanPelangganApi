@@ -1,5 +1,5 @@
 import express from 'express'
-import { getDataUser, insertDataUser, login, logout, logina } from '../controllers/UsersController.js'
+import {  logina } from '../controllers/UsersController.js'
 import { verifyToken } from '../middleware/VerifyToken.js'
 import { refreshToken } from '../controllers/RefreshToken.js'
 
@@ -7,13 +7,13 @@ import { insertDataSurveiKepuasan, getDataSurveiKepuasan, getSurveiKepuasanById,
 const router = express.Router()
 
 // User
-router.get('/apisirs/users', verifyToken, getDataUser)
-router.post('/apisirs/users', insertDataUser)
+// router.get('/apisirs/users', verifyToken, getDataUser)
+// router.post('/apisirs/users', insertDataUser)
 
 // Token
-router.post('/apisirs/login', login)
+// router.post('/apisirs/login', login)
 router.post('/apisirs/logina', logina)
-router.delete('/apisirs/logout', logout)
+// router.delete('/apisirs/logout', logout)
 router.get('/apisirs/token', refreshToken)
 
 //Survei Kepuasan

@@ -1,4 +1,4 @@
-import { users } from "../models/UserModel.js";
+import {usersSurvei } from "../models/UserModel.js";
 import jsonWebToken from 'jsonwebtoken'
 
 export const refreshToken = (req, res) => {
@@ -10,7 +10,7 @@ export const refreshToken = (req, res) => {
         })
         return
     }
-    users.findAll({
+    usersSurvei.findAll({
         where: {
             refresh_token: refreshToken
         }

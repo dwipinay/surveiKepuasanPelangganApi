@@ -1,6 +1,6 @@
 import express from "express"
 import {} from 'dotenv/config'
-import { databaseRSOnline } from "./config/Database.js"
+import { databaseSURVEI } from "./config/Database.js"
 import router from "./routes/index.js"
 import cookieParser from "cookie-parser"
 import cors from "cors"
@@ -8,7 +8,7 @@ import cors from "cors"
 const app = express()
 
 try {
-    await databaseRSOnline.authenticate()
+    await databaseSURVEI.authenticate()
     console.log('database connected...')
 } catch (error) {
     console.log(error)

@@ -1,5 +1,5 @@
 import { databaseSURVEI } from '../config/Database.js'
-import { dataResponden, dataPendapatResponden1,dataPendapatResponden2, dataPendidikanTerakhir, dataPekerjaanUtama, dataDebitur, dataJawaban,  dataPertanyaan, dataJenisKelamin, dataRekomendasi } from '../models/SurveiKepuasan.js'
+import { dataResponden, dataPendapatResponden1, dataPendidikanTerakhir, dataPekerjaanUtama, dataDebitur, dataJawaban,  dataPertanyaan, dataJenisKelamin, dataRekomendasi } from '../models/SurveiKepuasan.js'
 import Joi from 'joi'
 import { createHash } from "crypto"
 
