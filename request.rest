@@ -1,17 +1,13 @@
 ### Get User Data
-GET http://localhost:5001/apisurveikepuasanpelanggan/users
+GET http://202.70.136.86/apisurveikepuasanpelanggan/users
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjcsIm5hbWEiOiJpbmF5IiwiZW1haWwiOiJpbmF5QGdtYWlsLmNvbSIsInJzSWQiOiIxIiwiaWF0IjoxNjczMzM2NzY0LCJleHAiOjE2NzMzMzY3OTl9.OlIsHubSol7JZjcOxQR7m4JzF_NJUR96v0DxKTQ5bgw
 
 ### Get Token
-GET http://localhost:5001/apisurveikepuasanpelanggan/token
-
-### Get Token
-GET http://202.70.136.86/apisurveikepuasanpelanggan/getkegiatan
-Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjU2LCJuYW1hIjoiUlMgVW11bSBEYWVyYWggVGFsYW5nIFViaSIsImVtYWlsIjoiMTYwMzA4NSIsInJzSWQiOiIxNjAzMDg1IiwiaWF0IjoxNjc2OTczMjMwLCJleHAiOjE2NzY5NzMyNjV9.ZwpcVYiEu6LTGMq7HxPGYoCAAGb3SeHUc2Eksy04qoc
+GET http://202.70.136.86/apisurveikepuasanpelanggan/token
 
 
-### RL 3.7 READ
+
+### Get data Survei ORM
 GET http://202.70.136.86/apisurveikepuasanpelanggan/surveikepuasan
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjU2LCJuYW1hIjoiUlMgVW11bSBEYWVyYWggVGFsYW5nIFViaSIsImVtYWlsIjoiMTYwMzA4NSIsInJzSWQiOiIxNjAzMDg1IiwiaWF0IjoxNjc2OTcyMzA5LCJleHAiOjE2NzY5NzIzNDR9.dbD2foUyyVNd3YCMTwZANU24J-eYpuWu506t1jpWP0w
@@ -21,12 +17,17 @@ POST http://202.70.136.86/apisurveikepuasanpelanggan/login
 Content-Type: application/json
 
 {
-    "userName": "1603085",
+    "userName": "3374010",
     "password": "12345"
 }
 
-###survei
-POST  http://202.70.136.86/apisurveikepuasanpelanggan/surveikepuasan
+### Get Data Survei SQL
+GET http://202.70.136.861/apisurveikepuasanpelanggan/getdatasurveikepuasanpelanggan
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjU2LCJuYW1hIjoiUlMgVW11bSBEYWVyYWggVGFsYW5nIFViaSIsImVtYWlsIjoiMTYwMzA4NSIsInJzSWQiOiIxNjAzMDg1IiwiaWF0IjoxNjc3MDI3MzY4LCJleHAiOjE2NzcwMjc0MDN9.dUNzO0-ZDY_7lz5yf2Qie1h87Aybd_UelAwCUGKk0H8
+
+### Input Survei
+POST  http://202.70.136.86/apisurveikepuasanpelanggan/surveikepuasanpelanggan
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjU2LCJuYW1hIjoiUlMgVW11bSBEYWVyYWggVGFsYW5nIFViaSIsImVtYWlsIjoiMTYwMzA4NSIsInJzSWQiOiIxNjAzMDg1IiwiaWF0IjoxNjc2OTcyMjY0LCJleHAiOjE2NzY5NzIyOTl9.Q-w_kjPybac47Ni7GJ4_7N6pZseumz2WYICIm-g9Fwk
 

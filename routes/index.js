@@ -3,7 +3,7 @@ import {  login } from '../controllers/UsersController.js'
 import { verifyToken } from '../middleware/VerifyToken.js'
 import { refreshToken } from '../controllers/RefreshToken.js'
 
-import { insertDataSurveiKepuasan, getDataSurveiKepuasan, getSurveiKepuasanById, getDataSurveiKepuasanDetail, updateDataSurveiKepuasan, deleteDataSurveiKepuasan, getKegiatan } from '../controllers/SurveiKepuasanController.js'
+import { insertDataSurveiKepuasan, getDataSurveiKepuasan, getSurveiKepuasanById, getDataSurveiKepuasanDetail, updateDataSurveiKepuasan, deleteDataSurveiKepuasan, getSurveiKepuasanPelanggan } from '../controllers/SurveiKepuasanController.js'
 const router = express.Router()
 
 // User
@@ -17,12 +17,12 @@ router.post('/apisurveikepuasanpelanggan/login', login)
 router.get('/apisurveikepuasanpelanggan/token', refreshToken)
 
 //Survei Kepuasan
-router.post('/apisurveikepuasanpelanggan/surveikepuasan',verifyToken, insertDataSurveiKepuasan)
-router.get('/apisurveikepuasanpelanggan/surveikepuasan', verifyToken, getDataSurveiKepuasan)
-router.get('/apisurveikepuasanpelanggan/surveikepuasandetail', getDataSurveiKepuasanDetail)
-router.get('/apisurveikepuasanpelanggan/surveikepuasandetail/:id', getSurveiKepuasanById)
-router.patch('/apisurveikepuasanpelanggan/surveikepuasandetail/:id', updateDataSurveiKepuasan);
-router.delete('/apisurveikepuasanpelanggan/surveikepuasandetail/:id', deleteDataSurveiKepuasan);
+router.post('/apisurveikepuasanpelanggan/surveikepuasanpelanggan',verifyToken, insertDataSurveiKepuasan)
+router.get('/apisurveikepuasanpelanggan/surveikepuasanpelanggan', verifyToken, getDataSurveiKepuasan)
+router.get('/apisurveikepuasanpelanggan/surveikepuasanpelanggandetail', getDataSurveiKepuasanDetail)
+router.get('/apisurveikepuasanpelanggan/surveikepuasanpelanggandetail/:id', getSurveiKepuasanById)
+router.patch('/apisurveikepuasanpelanggan/surveikepuasanpelanggandetail/:id', updateDataSurveiKepuasan);
+router.delete('/apisurveikepuasanpelanggan/surveikepuasanpelanggandetail/:id', deleteDataSurveiKepuasan);
 
-router.get('/apisurveikepuasanpelanggan/getkegiatan',verifyToken, getKegiatan)
+router.get('/apisurveikepuasanpelanggan/getdatasurveikepuasanpelanggan',verifyToken, getSurveiKepuasanPelanggan)
 export default router

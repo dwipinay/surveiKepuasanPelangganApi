@@ -99,13 +99,8 @@ export const getDataSurveiKepuasanDetail = (req, res) => {
     })
 }
 
-export const getKegiatan = (req, res) => {
-    // const data = [
-    //     req.body.id,
-    //     req.user.rsId,
-    //     req.body.nama
-    // ]
-    // console.log(data)
+export const getSurveiKepuasanPelanggan = (req, res) => {
+
       getDataSurveiKepuasanJoin(req.user.rsId, (err, results) => {
         if (err) {
             res.status(422).send({
@@ -123,7 +118,7 @@ export const getKegiatan = (req, res) => {
         })
     })
 }
-// WHERE `data_responden`.`rs_id` = 1603085
+
 export const getSurveiKepuasanById = async(req,res)=>{
     dataPendapatResponden1.findOne({
        
