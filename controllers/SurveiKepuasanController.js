@@ -60,9 +60,16 @@ export const getDataSurveiKepuasan = (req, res) => {
         return
     })
 }
-export const getDataPendidikanTerakhir = (req, res) => {
-    dataPendidikanTerakhir.findAll({
-        attributes: ['id_pendidikan','pendidikan'],
+
+export const getDataPertanyaan = (req, res) => {
+    dataPertanyaan.findAll({
+        attributes: ['pertanyaan'],
+        include: [{
+            model: dataJawaban,
+            attributes: ['jawaban'],
+            required : true ,
+            
+        }]
     })
     .then((results) => {
         res.status(200).send({
@@ -79,6 +86,104 @@ export const getDataPendidikanTerakhir = (req, res) => {
         return
     })
 }
+
+export const getDataPendidikanTerakhir = (req, res) => {
+    dataPendidikanTerakhir.findAll({
+        attributes: ['id','pendidikan'],
+    })
+    .then((results) => {
+        res.status(200).send({
+            status: true,
+            message: "data found",
+            data: results
+        })
+    })
+    .catch((err) => {
+        res.status(422).send({
+            status: false,
+            message: err
+        })
+        return
+    })
+}
+
+export const getDataPekerjaanUtama = (req, res) => {
+    dataPekerjaanUtama.findAll({
+        attributes: ['id','pekerjaan'],
+    })
+    .then((results) => {
+        res.status(200).send({
+            status: true,
+            message: "data found",
+            data: results
+        })
+    })
+    .catch((err) => {
+        res.status(422).send({
+            status: false,
+            message: err
+        })
+        return
+    })
+}
+export const getDataJenisKelamin = (req, res) => {
+    dataJenisKelamin.findAll({
+        attributes: ['id','nama'],
+    })
+    .then((results) => {
+        res.status(200).send({
+            status: true,
+            message: "data found",
+            data: results
+        })
+    })
+    .catch((err) => {
+        res.status(422).send({
+            status: false,
+            message: err
+        })
+        return
+    })
+}
+export const getDataDebitur = (req, res) => {
+    dataDebitur.findAll({
+        attributes: ['id','debitur'],
+    })
+    .then((results) => {
+        res.status(200).send({
+            status: true,
+            message: "data found",
+            data: results
+        })
+    })
+    .catch((err) => {
+        res.status(422).send({
+            status: false,
+            message: err
+        })
+        return
+    })
+}
+export const getDataRekomendasi = (req, res) => {
+    dataRekomendasi.findAll({
+        attributes: ['id','rekomendasi'],
+    })
+    .then((results) => {
+        res.status(200).send({
+            status: true,
+            message: "data found",
+            data: results
+        })
+    })
+    .catch((err) => {
+        res.status(422).send({
+            status: false,
+            message: err
+        })
+        return
+    })
+}
+
 export const getDataSurveiKepuasanDetail = (req, res) => {
     dataPendapatResponden1.findAll({
         attributes: ['id','data_responden_id'],
@@ -102,6 +207,7 @@ export const getDataSurveiKepuasanDetail = (req, res) => {
 export const getSurveiKepuasanPelanggan = (req, res) => {
 
       getDataSurveiKepuasanJoin(req.user.rsId, (err, results) => {
+        
         if (err) {
             res.status(422).send({
                 status: false,
@@ -117,59 +223,6 @@ export const getSurveiKepuasanPelanggan = (req, res) => {
             }
         })
     })
-}
-
-export const getSurveiKepuasanById = async(req,res)=>{
-    dataPendapatResponden1.findOne({
-       
-        where:{
-            // rs_id: req.user.rsId,
-            // tahun: req.query.tahun
-            id:req.params.id
-        },
-        
-    })
-    .then((results) => {
-        res.status(200).send({
-            status: true,
-            message: "data found",
-            data: results
-        })
-    })
-    .catch((err) => {
-        res.status(422).send({
-            status: false,
-            message: err
-        })
-        return
-    })
-}
-
-export const updateDataSurveiKepuasan = async(req,res)=>{
-    try{
-        await dataPendapatResponden1.update(req.body,{
-            where:{
-                id: req.params.id
-            }
-        });
-        res.status(200).json({message: "Survei Updated"});
-    }catch(error){
-        console.log(error.message);
-    }
-}
-
-export const deleteDataSurveiKepuasan = async(req,res)=>{
-    try{
-        await dataPendapatResponden1.destroy({
-            where:{
-                id: req.params.id
-            }
-        });
-        
-        res.status(200).json({message: "Survei Deleted"});
-    }catch(error){
-        console.log(error.message);
-    }
 }
 
 export const insertDataSurveiKepuasan =  async (req, res) => {

@@ -3,7 +3,7 @@ import {  login } from '../controllers/UsersController.js'
 import { verifyToken } from '../middleware/VerifyToken.js'
 import { refreshToken } from '../controllers/RefreshToken.js'
 
-import { insertDataSurveiKepuasan, getDataSurveiKepuasan, getSurveiKepuasanById, getDataSurveiKepuasanDetail, updateDataSurveiKepuasan, deleteDataSurveiKepuasan, getSurveiKepuasanPelanggan } from '../controllers/SurveiKepuasanController.js'
+import { insertDataSurveiKepuasan, getDataSurveiKepuasan, getDataSurveiKepuasanDetail, getSurveiKepuasanPelanggan, getDataPendidikanTerakhir, getDataPekerjaanUtama, getDataJenisKelamin, getDataDebitur, getDataRekomendasi, getDataPertanyaan } from '../controllers/SurveiKepuasanController.js'
 const router = express.Router()
 
 // User
@@ -12,17 +12,20 @@ const router = express.Router()
 
 // Token
 // router.post('/apisirs/login', login)
-router.post('/apisurveikepuasanpelanggan/login', login)
+router.post('/apisurveikepuasanmasyarakat/login', login)
 // router.delete('/apisirs/logout', logout)
-router.get('/apisurveikepuasanpelanggan/token', refreshToken)
+router.get('/apisurveikepuasanmasyarakat/token', refreshToken)
 
 //Survei Kepuasan
-router.post('/apisurveikepuasanpelanggan/surveikepuasanpelanggan',verifyToken, insertDataSurveiKepuasan)
-router.get('/apisurveikepuasanpelanggan/surveikepuasanpelanggan', verifyToken, getDataSurveiKepuasan)
-router.get('/apisurveikepuasanpelanggan/surveikepuasanpelanggandetail', getDataSurveiKepuasanDetail)
-router.get('/apisurveikepuasanpelanggan/surveikepuasanpelanggandetail/:id', getSurveiKepuasanById)
-router.patch('/apisurveikepuasanpelanggan/surveikepuasanpelanggandetail/:id', updateDataSurveiKepuasan);
-router.delete('/apisurveikepuasanpelanggan/surveikepuasanpelanggandetail/:id', deleteDataSurveiKepuasan);
+router.post('/apisurveikepuasanmasyarakat/surveikepuasanpelanggan',verifyToken, insertDataSurveiKepuasan)
+router.get('/apisurveikepuasanmasyarakat/surveikepuasanpelanggan', verifyToken, getDataSurveiKepuasan)
+router.get('/apisurveikepuasanmasyarakat/surveikepuasanpelanggandetail', getDataSurveiKepuasanDetail)
 
-router.get('/apisurveikepuasanpelanggan/getdatasurveikepuasanpelanggan',verifyToken, getSurveiKepuasanPelanggan)
+router.get('/apisurveikepuasanmasyarakat/getmasterpendidikan', verifyToken, getDataPendidikanTerakhir)
+router.get('/apisurveikepuasanmasyarakat/getmasterpekerjaan', verifyToken, getDataPekerjaanUtama)
+router.get('/apisurveikepuasanmasyarakat/getmasterjeniskelamin', verifyToken, getDataJenisKelamin)
+router.get('/apisurveikepuasanmasyarakat/getmasterdebitur', verifyToken, getDataDebitur)
+router.get('/apisurveikepuasanmasyarakat/getmasterrekomendasi', verifyToken, getDataRekomendasi)
+router.get('/apisurveikepuasanmasyarakat/getmasterpertanyaan', verifyToken, getDataPertanyaan)
+router.get('/apisurveikepuasanmasyarakat/getdatasurveikepuasanpelanggan',verifyToken, getSurveiKepuasanPelanggan)
 export default router

@@ -1,19 +1,19 @@
 ### Get User Data
-GET http://202.70.136.86/apisurveikepuasanpelanggan/users
+GET http://202.70.136.86/apisurveikepuasanmasyarakat/users
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjcsIm5hbWEiOiJpbmF5IiwiZW1haWwiOiJpbmF5QGdtYWlsLmNvbSIsInJzSWQiOiIxIiwiaWF0IjoxNjczMzM2NzY0LCJleHAiOjE2NzMzMzY3OTl9.OlIsHubSol7JZjcOxQR7m4JzF_NJUR96v0DxKTQ5bgw
 
 ### Get Token
-GET http://202.70.136.86/apisurveikepuasanpelanggan/token
+GET http://202.70.136.86/apisurveikepuasanmasyarakat/token
 
 
 
 ### Get data Survei ORM
-GET http://202.70.136.86/apisurveikepuasanpelanggan/surveikepuasan
+GET http://202.70.136.86/apisurveikepuasanmasyarakat/surveikepuasan
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjU2LCJuYW1hIjoiUlMgVW11bSBEYWVyYWggVGFsYW5nIFViaSIsImVtYWlsIjoiMTYwMzA4NSIsInJzSWQiOiIxNjAzMDg1IiwiaWF0IjoxNjc2OTcyMzA5LCJleHAiOjE2NzY5NzIzNDR9.dbD2foUyyVNd3YCMTwZANU24J-eYpuWu506t1jpWP0w
 
 ### Login
-POST http://202.70.136.86/apisurveikepuasanpelanggan/login
+POST http://202.70.136.86/apisurveikepuasanmasyarakat/login
 Content-Type: application/json
 
 {
@@ -22,41 +22,72 @@ Content-Type: application/json
 }
 
 ### Get Data Survei SQL
-GET http://202.70.136.861/apisurveikepuasanpelanggan/getdatasurveikepuasanpelanggan
+GET http://202.70.136.86/apisurveikepuasanmasyarakat/getdatasurveikepuasanpelanggan
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjU2LCJuYW1hIjoiUlMgVW11bSBEYWVyYWggVGFsYW5nIFViaSIsImVtYWlsIjoiMTYwMzA4NSIsInJzSWQiOiIxNjAzMDg1IiwiaWF0IjoxNjc3MDI3MzY4LCJleHAiOjE2NzcwMjc0MDN9.dUNzO0-ZDY_7lz5yf2Qie1h87Aybd_UelAwCUGKk0H8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NzQ4LCJuYW1hIjoiUlMgVW11bSBQdXNhdCBEci4gS2FyaWFkaSIsImVtYWlsIjoiMzM3NDAxMCIsInJzSWQiOiIzMzc0MDEwIiwiaWF0IjoxNjc3MDQxMDIwLCJleHAiOjE2NzcwNDEwNTV9.DE3Y7sSyC-5xpksaCtve60eCQGBehE578G0Q6JnA35g
+
 
 ### Input Survei
-POST  http://202.70.136.86/apisurveikepuasanpelanggan/surveikepuasanpelanggan
+POST  http://202.70.136.86/apisurveikepuasanmasyarakat/surveikepuasanpelanggan
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjU2LCJuYW1hIjoiUlMgVW11bSBEYWVyYWggVGFsYW5nIFViaSIsImVtYWlsIjoiMTYwMzA4NSIsInJzSWQiOiIxNjAzMDg1IiwiaWF0IjoxNjc2OTcyMjY0LCJleHAiOjE2NzY5NzIyOTl9.Q-w_kjPybac47Ni7GJ4_7N6pZseumz2WYICIm-g9Fwk
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NzQ4LCJuYW1hIjoiUlMgVW11bSBQdXNhdCBEci4gS2FyaWFkaSIsImVtYWlsIjoiMzM3NDAxMCIsInJzSWQiOiIzMzc0MDEwIiwiaWF0IjoxNjc3MDQwODE0LCJleHAiOjE2NzcwNDA4NDl9.eo_ZOC54QjguIQnU3ySO3mjWii-t4ldpLu_jHC_rn4E
 
 {
-        "noRekamMedis": "12",
-        "nama": "Budi",
+        "noRekamMedis": "12-e-3",
+        "nama": "Rahmad",
         "tanggalLahir": "2022-01-01",
         "umur": 23,
-        "jenisKelamin": "AO01",
-        "pendidikanTerakhir": "AO01",
-        "pekerjaanUtama": "AO01",
-        "debitur": "AO01",
+        "jenisKelamin": "1",
+        "pendidikanTerakhir": "1",
+        "pekerjaanUtama": "1",
+        "debitur": "1",
         "noHp": "08222222222",
-        "rekomendasi": "AO01",
+        "rekomendasi": "1",
         "kritikSaran": "Tes",
         
     "data": [
        
         {
                     "pertanyaanId": 1,
-                    "jawabanId": "AO01"
+                    "jawabanId": "2"
                     
                     
         },
         {
                     "pertanyaanId": 2,
-                    "jawabanId": "AO04"
+                    "jawabanId": "8"
                     
                     
         }
     ]
 }
+
+### Get Master Data Pendidikan
+GET http://202.70.136.86/apisurveikepuasanmasyarakat/getmasterpendidikan
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NzQ4LCJuYW1hIjoiUlMgVW11bSBQdXNhdCBEci4gS2FyaWFkaSIsImVtYWlsIjoiMzM3NDAxMCIsInJzSWQiOiIzMzc0MDEwIiwiaWF0IjoxNjc3MDQxMzczLCJleHAiOjE2NzcwNDE0MDh9.8fIhtfuVsXvzMEJvpMIs4Fxk9kGXlFMrJCKvDY4p7aY
+
+### Get Master Data Pekerjaan
+GET http://202.70.136.86/apisurveikepuasanmasyarakat/getmasterpekerjaan
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NzQ4LCJuYW1hIjoiUlMgVW11bSBQdXNhdCBEci4gS2FyaWFkaSIsImVtYWlsIjoiMzM3NDAxMCIsInJzSWQiOiIzMzc0MDEwIiwiaWF0IjoxNjc3MDQxMzczLCJleHAiOjE2NzcwNDE0MDh9.8fIhtfuVsXvzMEJvpMIs4Fxk9kGXlFMrJCKvDY4p7aY
+
+### Get Master Data Jenis Kelamin
+GET http://202.70.136.86/apisurveikepuasanmasyarakat/getmasterjeniskelamin
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NzQ4LCJuYW1hIjoiUlMgVW11bSBQdXNhdCBEci4gS2FyaWFkaSIsImVtYWlsIjoiMzM3NDAxMCIsInJzSWQiOiIzMzc0MDEwIiwiaWF0IjoxNjc3MDQxMzczLCJleHAiOjE2NzcwNDE0MDh9.8fIhtfuVsXvzMEJvpMIs4Fxk9kGXlFMrJCKvDY4p7aY
+
+### Get Master Data Debitur
+GET http://202.70.136.86/apisurveikepuasanmasyarakat/getmasterdebitur
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NzQ4LCJuYW1hIjoiUlMgVW11bSBQdXNhdCBEci4gS2FyaWFkaSIsImVtYWlsIjoiMzM3NDAxMCIsInJzSWQiOiIzMzc0MDEwIiwiaWF0IjoxNjc3MDQxMzczLCJleHAiOjE2NzcwNDE0MDh9.8fIhtfuVsXvzMEJvpMIs4Fxk9kGXlFMrJCKvDY4p7aY
+
+### Get Master Data Rekomendasi
+GET http://202.70.136.86/apisurveikepuasanmasyarakat/getmasterrekomendasi
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NzQ4LCJuYW1hIjoiUlMgVW11bSBQdXNhdCBEci4gS2FyaWFkaSIsImVtYWlsIjoiMzM3NDAxMCIsInJzSWQiOiIzMzc0MDEwIiwiaWF0IjoxNjc3MDQxMzczLCJleHAiOjE2NzcwNDE0MDh9.8fIhtfuVsXvzMEJvpMIs4Fxk9kGXlFMrJCKvDY4p7aY
+
+### Get Master Data Pertanyaan
+GET http://202.70.136.86/apisurveikepuasanmasyarakat/getmasterpertanyaan
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NzQ4LCJuYW1hIjoiUlMgVW11bSBQdXNhdCBEci4gS2FyaWFkaSIsImVtYWlsIjoiMzM3NDAxMCIsInJzSWQiOiIzMzc0MDEwIiwiaWF0IjoxNjc3MDUzNzE0LCJleHAiOjE2NzcwNTM3NDl9.BZm29BKo3bV7tsXsVQkwTnwEpO_HcwHfr-HDi9H39Bg
