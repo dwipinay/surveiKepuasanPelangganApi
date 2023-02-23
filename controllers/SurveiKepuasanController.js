@@ -63,13 +63,33 @@ export const getDataSurveiKepuasan = (req, res) => {
 
 export const getDataPertanyaan = (req, res) => {
     dataPertanyaan.findAll({
-        attributes: ['pertanyaan'],
-        include: [{
-            model: dataJawaban,
-            attributes: ['jawaban'],
-            required : true ,
+        attributes: ['id','pertanyaan'],
+        // include: [{
+        //     model: dataJawaban,
+        //     attributes: ['id','pertanyaan_id','jawaban'],
+        //     required : true ,
             
-        }]
+        // }]
+    })
+    .then((results) => {
+        res.status(200).send({
+            status: true,
+            message: "data found",
+            data: results
+        })
+    })
+    .catch((err) => {
+        res.status(422).send({
+            status: false,
+            message: err
+        })
+        return
+    })
+}
+
+export const getDataJawaban = (req, res) => {
+    dataJawaban.findAll({
+        attributes: ['id','pertanyaan_id','jawaban'],
     })
     .then((results) => {
         res.status(200).send({

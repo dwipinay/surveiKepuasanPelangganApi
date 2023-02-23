@@ -3,7 +3,7 @@ import {  login } from '../controllers/UsersController.js'
 import { verifyToken } from '../middleware/VerifyToken.js'
 import { refreshToken } from '../controllers/RefreshToken.js'
 
-import { insertDataSurveiKepuasan, getDataSurveiKepuasan, getDataSurveiKepuasanDetail, getSurveiKepuasanPelanggan, getDataPendidikanTerakhir, getDataPekerjaanUtama, getDataJenisKelamin, getDataDebitur, getDataRekomendasi, getDataPertanyaan } from '../controllers/SurveiKepuasanController.js'
+import { insertDataSurveiKepuasan, getDataSurveiKepuasan, getDataSurveiKepuasanDetail, getSurveiKepuasanPelanggan, getDataPendidikanTerakhir, getDataPekerjaanUtama, getDataJenisKelamin, getDataDebitur, getDataRekomendasi, getDataPertanyaan, getDataJawaban } from '../controllers/SurveiKepuasanController.js'
 const router = express.Router()
 
 // User
@@ -17,9 +17,9 @@ router.post('/apisurveikepuasanmasyarakat/login', login)
 router.get('/apisurveikepuasanmasyarakat/token', refreshToken)
 
 //Survei Kepuasan
-router.post('/apisurveikepuasanmasyarakat/surveikepuasanpelanggan',verifyToken, insertDataSurveiKepuasan)
-router.get('/apisurveikepuasanmasyarakat/surveikepuasanpelanggan', verifyToken, getDataSurveiKepuasan)
-router.get('/apisurveikepuasanmasyarakat/surveikepuasanpelanggandetail', getDataSurveiKepuasanDetail)
+router.post('/apisurveikepuasanmasyarakat/surveikepuasanmasyarakat',verifyToken, insertDataSurveiKepuasan)
+router.get('/apisurveikepuasanmasyarakat/surveikepuasanmasyarakat', verifyToken, getDataSurveiKepuasan)
+router.get('/apisurveikepuasanmasyarakat/surveikepuasanmasyarakatdetail', getDataSurveiKepuasanDetail)
 
 router.get('/apisurveikepuasanmasyarakat/getmasterpendidikan', verifyToken, getDataPendidikanTerakhir)
 router.get('/apisurveikepuasanmasyarakat/getmasterpekerjaan', verifyToken, getDataPekerjaanUtama)
@@ -27,5 +27,6 @@ router.get('/apisurveikepuasanmasyarakat/getmasterjeniskelamin', verifyToken, ge
 router.get('/apisurveikepuasanmasyarakat/getmasterdebitur', verifyToken, getDataDebitur)
 router.get('/apisurveikepuasanmasyarakat/getmasterrekomendasi', verifyToken, getDataRekomendasi)
 router.get('/apisurveikepuasanmasyarakat/getmasterpertanyaan', verifyToken, getDataPertanyaan)
-router.get('/apisurveikepuasanmasyarakat/getdatasurveikepuasanpelanggan',verifyToken, getSurveiKepuasanPelanggan)
+router.get('/apisurveikepuasanmasyarakat/getmasterjawaban', verifyToken, getDataJawaban)
+router.get('/apisurveikepuasanmasyarakat/getdatasurveikepuasanmasyarakat',verifyToken, getSurveiKepuasanPelanggan)
 export default router
