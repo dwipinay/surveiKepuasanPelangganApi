@@ -248,7 +248,7 @@ export const getSurveiKepuasanPelanggan = (req, res) => {
 export const insertDataSurveiKepuasan =  async (req, res) => {
     const schema = Joi.object({
         
-        noRekamMedis: Joi.string(),
+        noRekamMedis: Joi.string().allow(""),
         nama: Joi.string().required(),
         tanggalLahir: Joi.date().required(),
         umur: Joi.number().required(),
@@ -256,9 +256,9 @@ export const insertDataSurveiKepuasan =  async (req, res) => {
         pendidikanTerakhir: Joi.string().required(),
         pekerjaanUtama: Joi.string().required(),
         debitur: Joi.string().required(),
-        noHp: Joi.string(),
+        noHp: Joi.string().allow(""),
         rekomendasi: Joi.string(),
-        kritikSaran: Joi.string(),
+        kritikSaran: Joi.string().allow(""),
         data: Joi.array()
             .items(
                 Joi.object().keys({
@@ -266,7 +266,7 @@ export const insertDataSurveiKepuasan =  async (req, res) => {
                     jawabanId: Joi.string().required()
    
                 })
-            ).required()
+            )
     })
 console.log(req);
     const { error, value } =  schema.validate(req.body)
